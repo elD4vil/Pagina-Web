@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Node.js MySql</title>
+
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+
+    <!-- Fontawesome Link -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('icons/vaca2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed; /* Hace que el fondo sea estático */
+      margin: 1;
+    }
+  </style>
+
+  </head>
+  <body class="bg-red-400">
+    <nav class="flex py-5 bg-white px-24">
+      <div class="w-1/2 px-12 mr-auto">
+        <!-- Enlace para la imagen que redirige a la página de inicio -->
+        <a href="/inicio">
+          <img src="icons/Colun_2016.png" alt="Logo" width="150" class="cursor-pointer">
+        </a>
+      </div>
+
+      <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
+        {{#if name}}
+        <p>{{name}}</p>
+
+        {{else}}
+
+        {{/if}}
+      </ul>
+    </nav>
+
+    {{{body}}}
+
+  </body>
+</html>

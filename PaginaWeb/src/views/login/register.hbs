@@ -1,0 +1,52 @@
+<div class="block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg">
+  <h1 class="text-3x1 font-bold text-center">¿Qué desea subir?</h1>
+	<form>
+		<button type="button" class="rounded-md bg-blue-500 w-full text-lg text-white
+		font-semibold p-2 my-3 hover:bg-green-600 focus:bg-green-700" onclick="goToSubirManual()">Subir Manual</button>
+	</form>
+
+    <form>
+		<button type="button" class="rounded-md bg-blue-500 w-full text-lg text-white
+		font-semibold p-2 my-3 hover:bg-green-600 focus:bg-green-700" onclick="goToSubirAplicacion()">Subir Aplicacion</button>
+	</form>
+
+  	<form>
+		<button type="button" class="rounded-md bg-blue-500 w-full text-lg text-white
+		font-semibold p-2 my-3 hover:bg-green-600 focus:bg-green-700" onclick="goToVerManual()">Ver Manuales</button>
+	</form>
+
+    <form>
+		<button type="button" class="rounded-md bg-blue-500 w-full text-lg text-white
+		font-semibold p-2 my-3 hover:bg-green-600 focus:bg-green-700" onclick="goToVerAplicacion()">Ver Aplicaciones</button>
+	</form>
+
+    <form>
+		<button type="button" class="rounded-md bg-red-500 w-full text-lg text-white
+		font-semibold p-2 my-3 hover:bg-green-600 focus:bg-green-700" onclick="goToCasa()">SALIR</button>
+	</form>
+
+</div>
+
+<script>
+  
+  function goToCasa() {
+    window.location.href = '/inicio';  // Ajusta la ruta según la configuración de tus rutas
+  }
+
+    function goToSubirManual() {
+    window.location.href = '/subirM';  // Ajusta la ruta según la configuración de tus rutas
+  }
+
+    function goToSubirAplicacion() {
+    window.location.href = '/subirA';  // Ajusta la ruta según la configuración de tus rutas
+  }
+
+      function goToVerManual() {
+    window.location.href = '/verManuales';  // Ajusta la ruta según la configuración de tus rutas
+  }
+
+    function goToVerAplicacion() {
+    window.location.href = '/verAplicaciones';  // Ajusta la ruta según la configuración de tus rutas
+  }
+
+</script>

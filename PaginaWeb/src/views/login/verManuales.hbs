@@ -1,0 +1,45 @@
+<div class="max-w-2xl mx-auto sm:px-4 lg:px-4">
+  <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-6">
+
+    <table class="table-fixed w-full">
+      <thead>
+        <tr class="bg-green-500 text-white">
+          <th class="w-12 py-4 ...">Nombre</th>
+          <th class="w-1/6 py-4 ...">Eliminar</th> <!-- Modifica el ancho según tus necesidades -->
+          <th class="w-1/6 py-4 ...">Descargar</th> <!-- Nueva columna para el botón de eliminar -->
+        </tr>
+      </thead>
+      <tbody>
+        {{#each archivos}}
+        <tr>
+          <td class="p-3">{{nombre}}</td>
+          <td class="p-5">
+             <form action="/login/destroy" method="post" class="mx-2">
+              <input type="hidden" value="{{ID}}" name="id">
+              <button class="bg-red-500 text-white px-3 py-1 rounded-sm" type="submit">
+                <i class="fas fa-trash"></i></button>
+            </form>
+          </td>
+        </td>
+            <td class="p-5">
+              <a href="/login/descargarArchivo/{{ID}}" download="{{nombre}}" class="bg-green-500 text-white px-4 py-1 rounded-sm ml-auto">
+                    <i class="fas fa-download"></i> 
+              </a>
+            </a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <form>
+      <button type="button" class="rounded-md bg-red-500 w-full text-lg text-white
+        font-semibold p-2 my-3 hover:bg-green-600 focus:bg-green-700" onclick="goToCasa()">SALIR</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function goToCasa() {
+    window.location.href = '/register';  // Ajusta la ruta según la configuración de tus rutas
+  }
+</script>
